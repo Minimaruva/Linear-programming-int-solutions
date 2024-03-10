@@ -69,7 +69,12 @@ function max(inequalities, profitFunction){
             }
     }
     
-    document.getElementById('result').textContent = "Max profit: "+profit + "\n x: "+X + "\n y: " + Y;
+    result = document.getElementById('result')
+    result.innerHTML += "Max profit: "+profit;
+    result.appendChild(document.createElement("br"));
+    result.innerHTML += "x: "+X;
+    result.appendChild(document.createElement("br"));
+    result.innerHTML += "y: "+Y;
 }
 function min(inequalities, profitFunction){
     let profit = 1000000;
@@ -142,7 +147,12 @@ function min(inequalities, profitFunction){
             }
     }
     
-    document.getElementById('result').textContent = "Max profit: "+profit + "\n x: "+X + "\n y: " + Y;
+    result = document.getElementById('result')
+    result.innerHTML += "Min profit: "+profit;
+    result.appendChild(document.createElement("br"));
+    result.innerHTML += "x: "+X;
+    result.appendChild(document.createElement("br"));
+    result.innerHTML += "y: "+Y;
 }
 
 
