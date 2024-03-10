@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Linear Programming Solver</title>
 </head>
 <body>
     <form>
-        <label for="profitFunction">Profit Function:<br></label>
+        <div id="profit-div"><label for="profitFunction">Profit Function:<br><br></label>
         <input type="text" id="profitFunction" placeholder="e.g., 3x + 2y">
-        <br>
-        <label for="inequalities">Inequalities (separate by commas, use >,<,<= or >=, <br>
-            add coeffiecient of 1 for single values, max 4 inequalities):<br></label>
+        </div>
+        <div id="ineq">
+        <label for="inequalities">Inequalities<br>(separate by commas, use <= or >=,
+            add coeffiecient of 1 for single values, max 4 inequalities):<br><br></label>
         <textarea id="inequalities" rows="4" placeholder="e.g., 2x + 1y <= 10, 3x - 1y >= 5"></textarea>
         <br>
-        <p>Optimization Type:</p>
+        </div>
+        <div id = 'opt'>
+        <p style="display: inline;">Optimization Type:</p>
         <input type="radio" id="maximize" name="optimizationType" value="maximize">
         <label for="maximize">Maximize</label>
         <input type="radio" id="minimize" name="optimizationType" value="minimize">
         <label for="minimize">Minimize</label>
         <br>
-        <input type="button" onclick="solveLinearProgramming()" value = "Submit"/>
-        <div id="result"></div>
+        </div>
+        <input id='solve' type="button" onclick="solveLinearProgramming()" value = "Solve"/>
+        <div id="inside"><div id = "result"></div></div>
     </form>
 </body>
 </html>
