@@ -2,7 +2,7 @@ function max(inequalities, profitFunction){
     let profit = 0;
     let X = 0;
     let Y = 0;
-    
+    //hello
     if (inequalities.length==1){
         for(let x=0; x<=200; x++){
             for(let y=0; y<=200; y++){
